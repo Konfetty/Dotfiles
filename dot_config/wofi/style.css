@@ -2,35 +2,42 @@
 Arc-Dark Color Scheme
 */
 
-@define-color highlight #5294e2;
-@define-color base1  #404552;
-@define-color base2 #40455;
-@define-color base3  #4b5160;
+@define-color highlight #DF5D22;
+@define-color base1 #180E0D;
+@define-color base2 #241514;
+@define-color base3  #2e1b1a;
 
 *{
     font-family: UbuntuMono;
+    font-size: 12pt;
 }
 
 window {
     border: 1px solid @highlight;
+    border-radius: 10px;
+    background-color: @base1;
 }
 
 #input {
     margin-bottom: 15px;
     padding:3px;
-    border-radius: 5px;
+    border-radius: 10px;
     border:none;
     color: white;
+    background-color: @base1;
 }
 
 #inner-box {
     background-color: @base3;
+    border-radius: 10px;
+
 }
 
 #outer-box {
     margin: 5px;
     padding:15px;
     background-color: @base2;
+    border-radius: 10px;
 }
 
 #text {
