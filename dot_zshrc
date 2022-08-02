@@ -104,3 +104,4 @@ source <(kubectl completion zsh)
 alias c="clear"
 alias rr="ranger"
 export EDITOR='code'
+export DEV_ENVIRONMENT=ale
