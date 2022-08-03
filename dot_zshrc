@@ -105,3 +105,4 @@ alias c="clear"
 alias rr="ranger"
 export EDITOR='code'
 export DEV_ENVIRONMENT=ale
+alias backendEdit='code -n ~/backend.code-workspace &'
