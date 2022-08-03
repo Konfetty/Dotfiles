@@ -14,7 +14,7 @@
 Arc-Dark Color Scheme
 */
 @define-color highlight #DF5D22 ;
-@define-color base1  #180E0D ;
+@define-color base1  rgba(24, 14, 13, 0.7) ;
 @define-color text #FDF9C2 ;
 
 @keyframes blink-warning {
