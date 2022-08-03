@@ -7,12 +7,14 @@
     "height": 30,
 
     "modules-left": [
-        "custom/launcher",
+        //"custom/launcher",
         "sway/workspaces",
         "sway/mode",
     ],
  
     "modules-center": [
+        "clock",
+        "battery",
     ],
 
     "modules-right": [
@@ -22,11 +24,9 @@
         "cpu",
         "pulseaudio",
         "custom/keyboard-layout",
-        "battery",
         //"custom/PBPbattery",
         "backlight#icon",
         "backlight#value",
-        "clock",
         "tray",
         //"custom/weather",
         "custom/power",
@@ -63,9 +63,9 @@
 
     "clock": {
         "interval": 10,
-        "format-alt": " {:%e %b %Y}", // Icon: calendar-alt
-        "format": "{:%H:%M}",
-        "tooltip-format": "{:%e %B %Y}"
+        "format": " {:%H:%M}", // Icon: calendar-alt
+        "format-alt": " {:%e %b %Y   %H:%M}",
+        "tooltip-format": "{:%e %b %Y}"
     },
 
     "cpu": {
