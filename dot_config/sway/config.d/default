@@ -236,3 +236,8 @@ bindsym $mod+r mode "resize"
 #
     bindsym $mod+Alt+m exec swaymsg input type:keyboard xkb_layout "de"
     bindsym $mod+Alt+n exec swaymsg input type:keyboard xkb_layout "us"
+
+#
+# Some small automation stuff
+#
+    bindsym $mod+Alt+b exec ~/.config/sway/scripts/monitoringWithSpotifyOn1.sh
