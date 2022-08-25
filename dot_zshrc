@@ -105,4 +105,8 @@ alias c="clear"
 alias rr="ranger"
 export EDITOR='code'
 export DEV_ENVIRONMENT=ale
+GOPATH="/home/aljoscha/go"
+GOBIN=$GOPATH/bin
+PATH=$PATH:$GOPATH:$GOBIN
+export PATH
 alias backendEdit='code -n ~/work/backend.code-workspace &'
