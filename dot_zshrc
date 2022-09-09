@@ -109,4 +109,9 @@ GOPATH="/home/aljoscha/go"
 GOBIN=$GOPATH/bin
 PATH=$PATH:$GOPATH:$GOBIN
 export PATH
+
+# Trever Aliases
 alias backendEdit='code -n ~/work/backend.code-workspace &'
+alias kcl='kubectl logs -f -n'
+alias aws-update="cd ~/work/backend/iac && npm run cdk-local deploy"
+alias clean-cluster-build='k3d cluster delete dev && k3d registry delete local && ./~/work/backend/scripts/run.sh'
