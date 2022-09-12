@@ -114,6 +114,7 @@ export PATH
 alias backendEdit='code -n ~/work/backend.code-workspace &'
 alias kcl='kubectl logs -f -n'
 alias aws-update="cd ~/work/backend/iac && npm run cdk-local deploy"
-alias clean-cluster-build='k3d cluster delete dev && k3d registry delete local && ./~/work/backend/scripts/run.sh'
+alias clean-cluster-build='k3d cluster delete dev && k3d registry delete local && cd ~/work/backend && ./scripts/run.sh'
 alias k3d-start='k3d cluster start dev'
 alias k3d-stop='k3d cluster stop dev'
+alias cluster-state='kubectl get pods -A'
