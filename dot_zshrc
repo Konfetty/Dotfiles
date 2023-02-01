@@ -120,3 +120,5 @@ alias k3d-stop='k3d cluster stop dev'
 alias watch-cluster-state='watch kubectl get pods -A'
 alias cluster-state='kubectl get pods -A'
 alias kc='kubectl'
+
+export BUF_USER=trever

@@ -1,3 +1,4 @@
+# see https://manpages.ubuntu.com/manpages/impish/man5/mako.5.html
 font=UbuntuMono 12.5
 
 background-color=#180E0D
@@ -10,6 +11,7 @@ progress-color=over #eceff480
 icon-path=/usr/share/icons/Arc-X-D
 max-icon-size=70
 layer=overlay
+anchor=top-center
 
 border-size=5
 border-radius=0
@@ -20,4 +22,4 @@ default-timeout=5000
 [urgency=high]
 
 ignore-timeout=1
-
+anchor=center
