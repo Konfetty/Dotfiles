@@ -19,8 +19,8 @@ set $powermenu ~/.config/waybar/scripts/power-menu.sh
 
 ### Idle configuration
 exec swayidle -w\
-    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
-    timeout 770 'swaymsg "output * dpms off"' \
+    timeout 1070000 'swaylock -f -C ~/.config/swaylock/config'\
+    timeout 770000 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -C ~/.config/swaylock/config'
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -38,7 +38,7 @@ exec swayidle -w\
     bindsym $mod+Return exec $term-float
 
     # Star ranger
-    bindsym $mod+Shift+Return exec $term-float -e ranger
+    bindsym $mod+Shift+Return exec $term-float -e tmux new-session -A -t 0-default
 
     # Open the power menu
     bindsym $mod+Shift+e exec $powermenu
@@ -53,7 +53,7 @@ exec swayidle -w\
     bindsym $mod+Shift+b exec $term-float -e btop
 
     # Activities
-    bindsym $mod+p exec ~/.config/wofi/windows.py
+    #bindsym $mod+p exec ~/.config/wofi/windows.py
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -221,6 +221,8 @@ bindsym $mod+r mode "resize"
 #
     bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+    bindsym $mod+Shift+print exec ~/.config/sway/scripts/screenshot.sh copy
+
 #
 # Keybindings List
 #
@@ -229,7 +231,7 @@ bindsym $mod+r mode "resize"
 #
 # Clipboard Manager
 #
-    bindsym $mod+Shift+v exec clipman pick -t wofi
+    # bindsym $mod+Shift+v exec clipman pick -t wofi
 
 #
 # Changing Keyboard Layout
@@ -240,4 +242,5 @@ bindsym $mod+r mode "resize"
 #
 # Some small automation stuff
 #
-    bindsym $mod+Alt+b exec ~/.config/sway/scripts/monitoringWithSpotifyOn1.sh
+    # bindsym $mod+Alt+b exec ~/.config/sway/scripts/monitoringWithSpotifyOn1.sh
+    bindsym $mod+Shift+v exec exec $term-float -e ~/.local/bin/lvim

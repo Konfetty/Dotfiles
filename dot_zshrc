@@ -70,7 +70,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git task)
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,4 +122,15 @@ alias watch-cluster-state='watch kubectl get pods -A'
 alias cluster-state='kubectl get pods -A'
 alias kc='kubectl'
 
+alias vpntug='sudo openconnect --user ja46giru vpn.tugraz.at'
+
+
 export BUF_USER=trever
+export DOCKER_BUILDKIT=1
+export KUBE_EDITOR="nano"
+
+source $HOME/.zshrc_private
+export PERSISTENCE=1
+export DEFAULT_REGION=eu-central-1
+
+export VISUAL=nvim

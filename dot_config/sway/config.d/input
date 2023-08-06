@@ -17,7 +17,18 @@ input type:keyboard {
     xkb_variant intl,qwerty
     xkb_options grp:shifts_toggle
 } 
+
 exec_always {
     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
     'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
+}
+
+#
+# Swap Capslock and Escape
+# Set keyboard repeat rate
+#
+input "type:keyboard" {
+    repeat_rate 100
+    repeat_delay 200
+    xkb_options caps:swapescape
 }
